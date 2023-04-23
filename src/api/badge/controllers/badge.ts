@@ -16,3 +16,4 @@ export default factories.createCoreController("api::badge.badge");
 //     return badges.map((badge: any) => badge);
 //   },
 // });
+//
