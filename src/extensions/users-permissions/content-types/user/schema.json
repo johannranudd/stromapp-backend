@@ -69,12 +69,8 @@
     "badges": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::badge.badge"
-    },
-    "categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
+      "target": "api::badge.badge",
+      "mappedBy": "user"
     }
   }
 }
