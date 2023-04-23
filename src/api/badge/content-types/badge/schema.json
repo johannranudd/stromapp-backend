@@ -4,7 +4,8 @@
   "info": {
     "singularName": "badge",
     "pluralName": "badges",
-    "displayName": "badge"
+    "displayName": "badge",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,14 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 30,
+      "minLength": 2
     },
     "kwh": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     }
   }
 }
