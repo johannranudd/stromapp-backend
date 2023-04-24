@@ -18,15 +18,17 @@
       "maxLength": 30,
       "minLength": 2
     },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "categories"
+    },
     "badges": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::badge.badge"
-    },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "api::badge.badge",
+      "mappedBy": "category"
     }
   }
 }
