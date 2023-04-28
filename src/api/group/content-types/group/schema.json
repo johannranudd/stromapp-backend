@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "groups",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "category",
+    "singularName": "group",
+    "pluralName": "groups",
+    "displayName": "Group",
     "description": ""
   },
   "options": {
@@ -13,22 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true,
-      "maxLength": 30,
-      "minLength": 2
+      "type": "string"
     },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "categories"
+      "inversedBy": "groups"
     },
     "badges": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::badge.badge",
-      "mappedBy": "category"
+      "mappedBy": "group"
+    },
+    "color": {
+      "type": "string",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
     }
   }
 }
