@@ -1,5 +1,6 @@
-module.exports = (plugin) => {
-  plugin.controllers.user.updateMe = async (ctx) => {
+// @ts-ignore
+module.exports = (plugin: any) => {
+  plugin.controllers.user.updateMe = async (ctx: any) => {
     if (!ctx.state.user || !ctx.state.user.id) {
       return (ctx.response.status = 401);
     }
@@ -9,7 +10,7 @@ module.exports = (plugin) => {
         where: { id: ctx.state.user.id },
         data: ctx.request.body,
       })
-      .then((res) => {
+      .then((res: any) => {
         ctx.response.status = 200;
       });
   };
