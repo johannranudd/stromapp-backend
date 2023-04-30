@@ -77,6 +77,16 @@
       "relation": "oneToMany",
       "target": "api::group.group",
       "mappedBy": "user"
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true,
+      "minLength": 8
     }
   }
 }
