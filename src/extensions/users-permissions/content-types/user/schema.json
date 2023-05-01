@@ -87,6 +87,14 @@
       "type": "string",
       "required": true,
       "minLength": 8
+    },
+    "allowNotifications": {
+      "type": "boolean",
+      "default": false
+    },
+    "notificationLimit": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
