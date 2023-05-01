@@ -1,3 +1,4 @@
+// @ts-ignore
 module.exports = ({ env }: any) => ({
   connection: {
     client: "postgres",
