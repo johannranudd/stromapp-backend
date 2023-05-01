@@ -20,3 +20,4 @@ module.exports = ({ env }: any) => ({
 //         rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false), // For self-signed certificates
 //       },
 //
+// before hosting
