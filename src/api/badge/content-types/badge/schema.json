@@ -29,12 +29,6 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "badges"
     },
-    "group": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::group.group",
-      "inversedBy": "badges"
-    },
     "color": {
       "type": "string",
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
@@ -44,6 +38,12 @@
       "type": "string",
       "required": true,
       "minLength": 2
+    },
+    "groups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::group.group",
+      "mappedBy": "badges"
     }
   }
 }

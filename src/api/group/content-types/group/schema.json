@@ -26,9 +26,9 @@
     },
     "badges": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::badge.badge",
-      "mappedBy": "group"
+      "inversedBy": "groups"
     },
     "color": {
       "type": "string",
